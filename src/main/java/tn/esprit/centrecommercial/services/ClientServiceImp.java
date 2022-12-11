@@ -3,6 +3,7 @@ package tn.esprit.centrecommercial.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.centrecommercial.entities.Boutique;
+import tn.esprit.centrecommercial.entities.Categorie;
 import tn.esprit.centrecommercial.entities.CentreCommercial;
 import tn.esprit.centrecommercial.entities.Client;
 import tn.esprit.centrecommercial.repositories.BoutiqueRepository;
@@ -44,6 +45,14 @@ public class ClientServiceImp implements IClientService{
 
 
        }
+
+    }
+
+    @Override
+    public List<Client> listclientsParCategorie(Categorie categorie) {
+        Boutique boutique =  boutiqueRepository.findBoutiqueByCategorie(categorie).get(categorie.compareTo(categorie));
+        return boutique.getClients();
+
 
     }
 }

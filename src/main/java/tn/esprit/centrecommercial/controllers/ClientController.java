@@ -3,6 +3,7 @@ package tn.esprit.centrecommercial.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.centrecommercial.entities.Categorie;
 import tn.esprit.centrecommercial.entities.Client;
 import tn.esprit.centrecommercial.services.IClientService;
 
@@ -23,5 +24,10 @@ public class ClientController {
     @PostMapping("ajou-client-boutique/{idBoutique}")
     public void ajouterEtAffecterClietBoutique(@RequestBody Client client , @PathVariable Long idBoutique) {
          clientService.ajouterEtAffecterClietBoutique(client, idBoutique)  ;
+    }
+
+    @GetMapping("listeDesClientsParCategorie")
+    List<Client> listeDesClientsParCategorie (@RequestParam Categorie categorie) {
+        return clientService.listclientsParCategorie(categorie)  ;
     }
 }

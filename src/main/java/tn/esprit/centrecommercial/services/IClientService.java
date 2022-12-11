@@ -1,6 +1,7 @@
 package tn.esprit.centrecommercial.services;
 
 
+import tn.esprit.centrecommercial.entities.Categorie;
 import tn.esprit.centrecommercial.entities.CentreCommercial;
 import tn.esprit.centrecommercial.entities.Client;
 
@@ -12,5 +13,7 @@ public interface IClientService {
  Client add (Client client) ;
 
  void ajouterEtAffecterClietBoutique (Client client, Long idBoutique);
+
+ List<Client> listclientsParCategorie(Categorie categorie) ;
 
 }
