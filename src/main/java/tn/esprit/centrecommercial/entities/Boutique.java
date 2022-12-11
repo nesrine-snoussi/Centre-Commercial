@@ -25,7 +25,7 @@ public class Boutique implements Serializable {
     @ManyToOne
     CentreCommercial centreCommercial ;
 
-    @ManyToMany (cascade = CascadeType.ALL , mappedBy = "boutiqueList")
+    @ManyToMany (cascade = CascadeType.ALL )
     List<Client> clients ;
 
 }

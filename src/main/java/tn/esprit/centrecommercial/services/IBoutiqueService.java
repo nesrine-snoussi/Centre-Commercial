@@ -8,5 +8,6 @@ import java.util.List;
 public interface IBoutiqueService {
      void ajouBoutique(Boutique boutique);
     /* void ajouterEtaffecterListeboutique(List<Boutique> lb , Long idCentre) ; */
-    public void ajouterEtaffecterListClient(List<Client> lc, Long idBoutique);
+//    public void ajouterEtaffecterListClient(List<Client> lc, Long idBoutique);
+//    public void ajouterEtAffecterListClient(Long idClient , List<Long> idBoutique);
 }

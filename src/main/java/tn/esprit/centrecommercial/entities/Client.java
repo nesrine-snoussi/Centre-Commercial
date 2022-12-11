@@ -1,5 +1,6 @@
 package tn.esprit.centrecommercial.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,7 @@ public class Client implements Serializable {
     @Enumerated(EnumType.STRING)
     private Genre genre ;
 
-    @ManyToMany (cascade = CascadeType.ALL )
+    @ManyToMany (cascade = CascadeType.ALL , mappedBy = "clients" )
+            @JsonIgnore
     List<Boutique> boutiqueList;
 }

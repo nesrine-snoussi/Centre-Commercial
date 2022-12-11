@@ -21,9 +21,9 @@ public class BoutiqueController {
     }
 
 
-    @PostMapping ("/ajouter-client-boutique/{idBoutique}")
-    void ajouterEtaffecterListeClient(@RequestBody List<Client> lc, @PathVariable Long idBoutique) {
-        boutiqueService.ajouterEtaffecterListClient(lc, idBoutique);
-
-    }
+//    @PostMapping ("/ajouter-client-boutique/{idBoutique}")
+//    void ajouterEtaffecterListeClient(@RequestBody List<Client> lc, @PathVariable Long idBoutique) {
+//        boutiqueService.ajouterEtaffecterListClient(lc, idBoutique);
+//
+//    }
 }

@@ -28,16 +28,21 @@ public class BoutiqueServiceImp implements IBoutiqueService {
 
     }
 
-    @Override
-    public void ajouterEtaffecterListClient(List<Client> lc, Long idBoutique) {
-        Boutique boutique = boutiqueRepository.findById(idBoutique).orElse(null) ;
-        for (Client client : lc) {
+//    @Override
+//    public void ajouterEtAffecterListClient(Long idClient, List<Long> idBoutique) {
+//
+//    }
 
-            client.getBoutiqueList().add(boutique);
-
-           clientRepository.save(client);
-       }
-    }
+//    @Override
+//    public void ajouterEtaffecterListClient(List<Client> lc, Long idBoutique) {
+//        Boutique boutique = boutiqueRepository.findById(idBoutique).orElse(null) ;
+//        for (Client client : lc) {
+//
+//            client.getBoutiqueList().add(boutique);
+//
+//           clientRepository.save(client);
+//       }
+//    }
 
 //    @Override
 //    public void ajouterEtaffecterListClient(List<Client> lc, Long idBoutique) {
