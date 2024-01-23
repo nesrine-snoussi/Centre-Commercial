@@ -1,6 +1,6 @@
 # My Spring Boot Mini Project
 
-A concise description of your project.
+The project involves implementing a simplified application for managing a shopping center.
 
 ## Table of Contents
 
